@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  --color-splash-mint: #D9F7E8;
+  --color-app-background: #F2F2F2;
+  --color-primary-blue: #2F6FED;
+  --color-muted-gray: #7A7A7A;
+
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-dark-text: #212121;
+
+  --color-card-gray: #EEEEEE;
+  --color-border-gray: #EEEEEE;
+}
+
+body {
+  background: var(--color-app-background);
+  color: var(--color-dark-text);
+}
