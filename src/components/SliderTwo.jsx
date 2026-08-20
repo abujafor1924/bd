@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getSliderTwo } from "../services/sliderService";
+import { fixImageUrl } from "../utils/imageUrl";
 
 function SliderTwo() {
   const [sliders, setSliders] = useState([]);
@@ -118,10 +119,7 @@ function SliderTwo() {
             `}
           >
             <img
-              src={slider.image?.replace(
-                "http://66.29.151.40:6060",
-                ""
-              )}
+              src={fixImageUrl(slider.image)}
               alt={`Slider ${index + 1}`}
               className="
                 block
