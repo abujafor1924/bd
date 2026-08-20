@@ -1,0 +1,12 @@
+[[redirects]]
+  from = "/api/v1/*"
+  to = "http://66.29.151.40:6060/api/v1/:splat"
+  status = 200
+  force = true
+
+
+[[redirects]]
+  from = "/media/*"
+  to = "http://66.29.151.40:6060/media/:splat"
+  status = 200
+  force = true
