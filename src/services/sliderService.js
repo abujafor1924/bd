@@ -1,5 +1,13 @@
-
 import api from "./api";
+
+const fixImageUrl = (url) => {
+  if (!url) return url;
+
+  return url.replace(
+    "http://66.29.151.40:6060",
+    ""
+  );
+};
 
 // ==============================
 // SLIDER ONE
@@ -10,7 +18,10 @@ export const getSliders = async () => {
     "/slider/slider-one/"
   );
 
-  return response.data;
+  return response.data.map((slider) => ({
+    ...slider,
+    image: fixImageUrl(slider.image),
+  }));
 };
 
 export const getSliderDetails = async (id) => {
@@ -18,9 +29,11 @@ export const getSliderDetails = async (id) => {
     `/slider/slider-one/${id}/`
   );
 
-  return response.data;
+  return {
+    ...response.data,
+    image: fixImageUrl(response.data.image),
+  };
 };
-
 
 // ==============================
 // SLIDER TWO
@@ -31,6 +44,8 @@ export const getSliderTwo = async () => {
     "/slider/slider-two/"
   );
 
-  return response.data;
+  return response.data.map((slider) => ({
+    ...slider,
+    image: fixImageUrl(slider.image),
+  }));
 };
-
