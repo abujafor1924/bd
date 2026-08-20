@@ -118,7 +118,10 @@ function SliderTwo() {
             `}
           >
             <img
-              src={slider.image}
+              src={slider.image?.replace(
+                "http://66.29.151.40:6060",
+                ""
+              )}
               alt={`Slider ${index + 1}`}
               className="
                 block
