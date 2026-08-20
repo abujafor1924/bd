@@ -6,7 +6,7 @@ import {
   BriefcaseMedical,
   CalendarDays,
   Clock3,
-  DollarSign,
+  
   Hospital,
   MapPin,
   Phone,
@@ -541,10 +541,13 @@ function PopularDoctorDetails() {
                         sm:text-sm
                       "
                     >
-                      <DollarSign
-                        size={16}
-                        className="shrink-0 text-[#2F6FED]"
-                      />
+                      <span className="text-[#2F6FED] font-bold text-xl">
+                        ৳
+                      </span>
+
+                      <span className="text-sm font-semibold text-[#555]">
+                        Consultation Fee
+                      </span>
 
                       <span>{doctor.doctor_fees}</span>
                     </div>
@@ -987,10 +990,9 @@ function PopularDoctorDetails() {
                   >
                     <div className="flex items-center justify-between gap-3">
                       <div className="flex min-w-0 items-center gap-2">
-                        <DollarSign
-                          size={19}
-                          className="shrink-0 text-[#2F6FED]"
-                        />
+                        <span className="text-[#2F6FED] text-xl font-bold">
+                          
+                        </span>
 
                         <span className="text-sm font-semibold text-[#555]">
                           Consultation Fee
@@ -998,15 +1000,15 @@ function PopularDoctorDetails() {
                       </div>
 
                       <span
-                        className="
-                          shrink-0
-                          text-lg
-                          font-extrabold
-                          text-[#212121]
-                        "
-                      >
-                        {doctor.doctor_fees}
-                      </span>
+  className="
+    shrink-0
+    text-lg
+    font-extrabold
+    text-[#212121]
+  "
+>
+  ৳ {doctor.doctor_fees}
+</span>
                     </div>
                   </div>
                 )}

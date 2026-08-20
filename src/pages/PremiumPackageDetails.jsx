@@ -496,32 +496,19 @@ return (
       absolute
       inset-0
       flex
-      items-center
+      items-end
     "
   >
     <div
       className="
         px-6
+        
         md:px-10
         lg:px-14
+        
       "
     >
-      <span
-        className="
-          inline-flex
-          rounded-full
-          bg-white
-          px-5
-          py-2
-          text-sm
-          font-semibold
-          text-[#2F6FED]
-          shadow-sm
-        "
-      >
-        Bellevie Guardian Health Programme
-      </span>
-
+      
       <h1
         className="
           mt-5
@@ -534,22 +521,10 @@ return (
       >
         {currentPackage.name}
 
-        <span className="ml-2">
-          ({currentPackage.bangla})
-        </span>
+        
       </h1>
 
-      <p
-        className="
-          mt-3
-          max-w-xl
-          text-base
-          text-white
-          md:text-lg
-        "
-      >
-        Affordable healthcare protection with premium benefits.
-      </p>
+      
     </div>
   </div>
 </div>
@@ -563,7 +538,7 @@ return (
 
 
 <div className="
-mt-10
+mt-12
 grid
 gap-6
 md:grid-cols-2

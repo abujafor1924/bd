@@ -170,25 +170,7 @@ const MedicalAccessories = () => {
       ===================================== */}
 
       <div className="mb-7">
-        <div
-          className="
-            inline-flex
-            items-center
-            gap-2
-            rounded-full
-            border
-            border-[#BEE9FF]
-            bg-[#D9F7E8]
-            px-4
-            py-2
-            text-xs
-            font-extrabold
-            text-[#2F6FED]
-          "
-        >
-          <Sparkles size={15} />
-          Healthcare Essentials
-        </div>
+        
 
         <h2
           className="
