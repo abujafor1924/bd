@@ -11,20 +11,15 @@ const medicalAccessoriesDetails = {
       "Non-slip bottom design",
       "Removable and washable cover",
     ],
-    products: [
-      {
-        name: "Orthopedic Coccyx Cushion",
-        description: "Provides maximum support and comfort while sitting.",
-      },
-      {
-        name: "Gel-Enhanced Seat Cushion",
-        description: "Cooling gel memory foam designed for long hours of sitting.",
-      },
-      {
-        name: "Portable Coccyx Pillow",
-        description: "Compact cushion perfect for office chairs or car seats.",
-      },
-    ],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&auto=format&fit=crop&q=80"
+    ]
   },
 
   2: {
@@ -38,16 +33,15 @@ const medicalAccessoriesDetails = {
       "Supports healthy prayer posture",
       "Embossed anti-slip surface",
     ],
-    products: [
-      {
-        name: "Orthopedic Prayer Mat Pad",
-        description: "Extra thick padded mat for joint protection during prayers.",
-      },
-      {
-        name: "Memory Foam Prayer Mat",
-        description: "Premium memory foam mat designed to absorb initial pressure.",
-      },
-    ],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1609599006353-e629f1d40e4f?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&auto=format&fit=crop&q=80"
+    ]
   },
 
   3: {
@@ -61,20 +55,15 @@ const medicalAccessoriesDetails = {
       "Improves blood circulation",
       "Contoured ergonomic shape",
     ],
-    products: [
-      {
-        name: "Leg Elevation Wedge Pillow",
-        description: "Elevates legs at the optimal angle to improve blood flow.",
-      },
-      {
-        name: "Knee Support Roll",
-        description: "Half-roll cushion for targeted support under the knees.",
-      },
-      {
-        name: "Post-Surgery Recovery Wedge",
-        description: "Designed specifically for post-operative knee recovery.",
-      },
-    ],
+    galleryImages: [
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
+      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
+      "/media/accessory_categories/i.webp",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
+    ]
   },
 
   4: {
@@ -88,16 +77,15 @@ const medicalAccessoriesDetails = {
       "Prevents morning stiffness",
       "Premium breathable fabric cover",
     ],
-    products: [
-      {
-        name: "Lumbar Support Sleep Wedge",
-        description: "Under-back wedge pillow for spinal alignment during sleep.",
-      },
-      {
-        name: "Adjustable Lumbar Cushion",
-        description: "Support cushion with adjustable thickness options.",
-      },
-    ],
+    galleryImages: [
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
+      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
+      "/media/accessory_categories/i.webp",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
+    ]
   },
 
   5: {
@@ -111,16 +99,15 @@ const medicalAccessoriesDetails = {
       "Supports upper body elevation",
       "Hypoallergenic cover",
     ],
-    products: [
-      {
-        name: "Premium Acid Reflux Wedge",
-        description: "Gradual slope pillow designed for reflux and breathing comfort.",
-      },
-      {
-        name: "Foldable Bed Wedge",
-        description: "Space-saving foldable wedge for sitting or sleeping.",
-      },
-    ],
+    galleryImages: [
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
+      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
+      "/media/accessory_categories/i.webp",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
+    ]
   },
 
   6: {
@@ -134,20 +121,15 @@ const medicalAccessoriesDetails = {
       "Essential first aid items",
       "Easy to store and carry",
     ],
-    products: [
-      {
-        name: "First Aid Kit",
-        description: "A convenient collection of essential first aid supplies.",
-      },
-      {
-        name: "Medical Tape",
-        description: "Useful for securing dressings and bandages.",
-      },
-      {
-        name: "Cotton Roll",
-        description: "Basic medical and personal care supply.",
-      },
-    ],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1512428813824-f48d95165311?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1550572017-edd951b55104?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80"
+    ]
   },
 
   7: {
@@ -161,20 +143,15 @@ const medicalAccessoriesDetails = {
       "Available for personal use",
       "Convenient and easy to use",
     ],
-    products: [
-      {
-        name: "Surgical Face Mask",
-        description: "Disposable mask for everyday protective use.",
-      },
-      {
-        name: "Medical Gloves",
-        description: "Disposable gloves for hygiene and protection.",
-      },
-      {
-        name: "N95 Mask",
-        description: "Protective mask designed for appropriate healthcare use.",
-      },
-    ],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584483777135-217362a6b2de?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1605656811221-2281bab7495b?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1583947581924-860bda6a26df?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584744900262-355f1f7699d8?w=800&auto=format&fit=crop&q=80"
+    ]
   },
 
   9: {
@@ -188,20 +165,15 @@ const medicalAccessoriesDetails = {
       "Designed for comfort",
       "Helps improve mobility and independence",
     ],
-    products: [
-      {
-        name: "Walking Stick",
-        description: "Simple support for everyday walking.",
-      },
-      {
-        name: "Walking Frame",
-        description: "Provides additional stability while walking.",
-      },
-      {
-        name: "Wheelchair",
-        description: "Mobility solution for users requiring seated support.",
-      },
-    ],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1607990283143-e81e7a2c93ab?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=800&auto=format&fit=crop&q=80"
+    ]
   },
 
   10: {
@@ -215,20 +187,15 @@ const medicalAccessoriesDetails = {
       "Easy to operate products",
       "Supports regular respiratory management",
     ],
-    products: [
-      {
-        name: "Nebulizer",
-        description: "Device commonly used for respiratory medication delivery.",
-      },
-      {
-        name: "Oxygen Mask",
-        description: "Mask designed for appropriate oxygen therapy use.",
-      },
-      {
-        name: "Respiratory Accessories",
-        description: "Essential accessories for respiratory care equipment.",
-      },
-    ],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584515981387-a257c79cb794?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1619088410291-29093dfb4967?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=800&auto=format&fit=crop&q=80"
+    ]
   },
 
   11: {
@@ -242,20 +209,15 @@ const medicalAccessoriesDetails = {
       "Lightweight and convenient",
       "Useful for resting and recovery",
     ],
-    products: [
-      {
-        name: "Memory Foam Bed Wedge",
-        description: "Supportive wedge designed for comfortable positioning.",
-      },
-      {
-        name: "Adjustable Bed Wedge",
-        description: "Flexible positioning solution for different comfort needs.",
-      },
-      {
-        name: "Leg Elevation Wedge",
-        description: "Designed to provide comfortable leg elevation.",
-      },
-    ],
+    galleryImages: [
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
+      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
+      "/media/accessory_categories/i.webp",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
+    ]
   },
 
   // Fallback name keys to ensure name-based match works flawlessly
@@ -270,20 +232,15 @@ const medicalAccessoriesDetails = {
       "Non-slip bottom design",
       "Removable and washable cover",
     ],
-    products: [
-      {
-        name: "Orthopedic Coccyx Cushion",
-        description: "Provides maximum support and comfort while sitting.",
-      },
-      {
-        name: "Gel-Enhanced Seat Cushion",
-        description: "Cooling gel memory foam designed for long hours of sitting.",
-      },
-      {
-        name: "Portable Coccyx Pillow",
-        description: "Compact cushion perfect for office chairs or car seats.",
-      },
-    ],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&auto=format&fit=crop&q=80"
+    ]
   },
   "special prayer mat pad": {
     title: "Special Prayer Mat Pad",
@@ -296,16 +253,15 @@ const medicalAccessoriesDetails = {
       "Supports healthy prayer posture",
       "Embossed anti-slip surface",
     ],
-    products: [
-      {
-        name: "Orthopedic Prayer Mat Pad",
-        description: "Extra thick padded mat for joint protection during prayers.",
-      },
-      {
-        name: "Memory Foam Prayer Mat",
-        description: "Premium memory foam mat designed to absorb initial pressure.",
-      },
-    ],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1609599006353-e629f1d40e4f?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&auto=format&fit=crop&q=80"
+    ]
   },
   "knee support roll and wedge": {
     title: "Knee Support Roll And Wedge",
@@ -318,20 +274,15 @@ const medicalAccessoriesDetails = {
       "Improves blood circulation",
       "Contoured ergonomic shape",
     ],
-    products: [
-      {
-        name: "Leg Elevation Wedge Pillow",
-        description: "Elevates legs at the optimal angle to improve blood flow.",
-      },
-      {
-        name: "Knee Support Roll",
-        description: "Half-roll cushion for targeted support under the knees.",
-      },
-      {
-        name: "Post-Surgery Recovery Wedge",
-        description: "Designed specifically for post-operative knee recovery.",
-      },
-    ],
+    galleryImages: [
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
+      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
+      "/media/accessory_categories/i.webp",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
+    ]
   },
   "support sleeping wedge": {
     title: "Support Sleeping Wedge",
@@ -344,16 +295,15 @@ const medicalAccessoriesDetails = {
       "Prevents morning stiffness",
       "Premium breathable fabric cover",
     ],
-    products: [
-      {
-        name: "Lumbar Support Sleep Wedge",
-        description: "Under-back wedge pillow for spinal alignment during sleep.",
-      },
-      {
-        name: "Adjustable Lumbar Cushion",
-        description: "Support cushion with adjustable thickness options.",
-      },
-    ],
+    galleryImages: [
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
+      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
+      "/media/accessory_categories/i.webp",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
+    ]
   },
   "elevated bed wedge": {
     title: "Elevated Bed Wedge",
@@ -366,16 +316,15 @@ const medicalAccessoriesDetails = {
       "Supports upper body elevation",
       "Hypoallergenic cover",
     ],
-    products: [
-      {
-        name: "Premium Acid Reflux Wedge",
-        description: "Gradual slope pillow designed for reflux and breathing comfort.",
-      },
-      {
-        name: "Foldable Bed Wedge",
-        description: "Space-saving foldable wedge for sitting or sleeping.",
-      },
-    ],
+    galleryImages: [
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
+      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
+      "/media/accessory_categories/i.webp",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
+    ]
   },
   "first aid supplies": {
     title: "First Aid Supplies",
@@ -388,20 +337,15 @@ const medicalAccessoriesDetails = {
       "Essential first aid items",
       "Easy to store and carry",
     ],
-    products: [
-      {
-        name: "First Aid Kit",
-        description: "A convenient collection of essential first aid supplies.",
-      },
-      {
-        name: "Medical Tape",
-        description: "Useful for securing dressings and bandages.",
-      },
-      {
-        name: "Cotton Roll",
-        description: "Basic medical and personal care supply.",
-      },
-    ],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1512428813824-f48d95165311?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1550572017-edd951b55104?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80"
+    ]
   },
   "face masks and gloves": {
     title: "Face Masks and Gloves",
@@ -414,20 +358,15 @@ const medicalAccessoriesDetails = {
       "Available for personal use",
       "Convenient and easy to use",
     ],
-    products: [
-      {
-        name: "Surgical Face Mask",
-        description: "Disposable mask for everyday protective use.",
-      },
-      {
-        name: "Medical Gloves",
-        description: "Disposable gloves for hygiene and protection.",
-      },
-      {
-        name: "N95 Mask",
-        description: "Protective mask designed for appropriate healthcare use.",
-      },
-    ],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584483777135-217362a6b2de?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1605656811221-2281bab7495b?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1583947581924-860bda6a26df?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584744900262-355f1f7699d8?w=800&auto=format&fit=crop&q=80"
+    ]
   },
   "mobility aids": {
     title: "Mobility Aids",
@@ -440,20 +379,15 @@ const medicalAccessoriesDetails = {
       "Designed for comfort",
       "Helps improve mobility and independence",
     ],
-    products: [
-      {
-        name: "Walking Stick",
-        description: "Simple support for everyday walking.",
-      },
-      {
-        name: "Walking Frame",
-        description: "Provides additional stability while walking.",
-      },
-      {
-        name: "Wheelchair",
-        description: "Mobility solution for users requiring seated support.",
-      },
-    ],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1607990283143-e81e7a2c93ab?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=800&auto=format&fit=crop&q=80"
+    ]
   },
   "respiratory units": {
     title: "Respiratory Units",
@@ -466,20 +400,15 @@ const medicalAccessoriesDetails = {
       "Easy to operate products",
       "Supports regular respiratory management",
     ],
-    products: [
-      {
-        name: "Nebulizer",
-        description: "Device commonly used for respiratory medication delivery.",
-      },
-      {
-        name: "Oxygen Mask",
-        description: "Mask designed for appropriate oxygen therapy use.",
-      },
-      {
-        name: "Respiratory Accessories",
-        description: "Essential accessories for respiratory care equipment.",
-      },
-    ],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584515981387-a257c79cb794?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1619088410291-29093dfb4967?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=800&auto=format&fit=crop&q=80"
+    ]
   },
   "bed wedges": {
     title: "Bed Wedges",
@@ -492,20 +421,15 @@ const medicalAccessoriesDetails = {
       "Lightweight and convenient",
       "Useful for resting and recovery",
     ],
-    products: [
-      {
-        name: "Memory Foam Bed Wedge",
-        description: "Supportive wedge designed for comfortable positioning.",
-      },
-      {
-        name: "Adjustable Bed Wedge",
-        description: "Flexible positioning solution for different comfort needs.",
-      },
-      {
-        name: "Leg Elevation Wedge",
-        description: "Designed to provide comfortable leg elevation.",
-      },
-    ],
+    galleryImages: [
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
+      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
+      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
+      "/media/accessory_categories/i.webp",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
+    ]
   },
 };
 

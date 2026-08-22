@@ -22,6 +22,7 @@ const MedicalAccessoriesDetails = () => {
   const [category, setCategory] = useState(location.state?.category || null);
   const [loading, setLoading] = useState(!location.state?.category);
   const [error, setError] = useState("");
+  const [activeImage, setActiveImage] = useState(null);
 
   useEffect(() => {
     if (!category) {
@@ -51,11 +52,11 @@ const MedicalAccessoriesDetails = () => {
   const getDetails = (cat) => {
     if (!cat) return null;
     const catName = (cat.name_en || cat.name || "").toLowerCase().trim();
-    
+
     if (catName && medicalAccessoriesDetails[catName]) {
       return medicalAccessoriesDetails[catName];
     }
-    
+
     // Check if any title match in the keys
     const matchedKey = Object.keys(medicalAccessoriesDetails).find(
       (key) =>
@@ -64,12 +65,12 @@ const MedicalAccessoriesDetails = () => {
     if (matchedKey) {
       return medicalAccessoriesDetails[matchedKey];
     }
-    
+
     // Fallback to ID-based match
     if (medicalAccessoriesDetails[id]) {
       return medicalAccessoriesDetails[id];
     }
-    
+
     // Generate high-quality fallback details dynamically so all categories look the same
     const name = cat.name_en || cat.name || cat.name_bn || "Medical Accessory";
     const desc = cat.details_en || cat.details || cat.details_bn || `${name} are premium-quality medical accessories designed to support health and wellness.`;
@@ -561,10 +562,10 @@ const MedicalAccessoriesDetails = () => {
       </section>
 
       {/* =====================================
-          CATEGORY BANNER
+          PRODUCT GALLERY (7 IMAGE CARDS)
       ===================================== */}
 
-      {category?.image && (
+      {details?.galleryImages && details.galleryImages.length > 0 && (
         <section className="mt-10">
           <div className="mb-6">
             <div
@@ -582,7 +583,7 @@ const MedicalAccessoriesDetails = () => {
               "
             >
               <HeartPulse size={15} />
-              Category Details
+              Product Catalog
             </div>
 
             <h2
@@ -595,16 +596,60 @@ const MedicalAccessoriesDetails = () => {
                 md:text-3xl
               "
             >
-              Product Catalog
+              Available Products
             </h2>
           </div>
 
-          <div className="overflow-hidden rounded-[24px] border border-[#EEEEEE] bg-white shadow-[0_6px_24px_rgba(0,0,0,0.05)] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)]">
-            <img
-              src={category.image}
-              alt={categoryName}
-              className="w-full h-auto object-contain block mx-auto"
-            />
+          <div className="grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {details.galleryImages.map((imageUri, index) => {
+              const getFullImageUrl = (url) => {
+                if (!url) return "";
+                if (url.startsWith("http")) return url;
+                return `http://66.29.151.40:6060${url}`;
+              };
+
+              const fullUrl = getFullImageUrl(imageUri);
+
+              return (
+                <button
+                  key={index}
+                  onClick={() => setActiveImage(fullUrl)}
+                  className="
+                    group
+                    relative
+                    aspect-[4/3]
+                    w-full
+                    overflow-hidden
+                    rounded-[24px]
+                    border
+                    border-[#EEEEEE]
+                    bg-white
+                    p-0
+                    shadow-[0_6px_24px_rgba(0,0,0,0.05)]
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1.5
+                    hover:shadow-[0_14px_34px_rgba(0,0,0,0.09)]
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-[#2F6FED]/30
+                  "
+                >
+                  <img
+                    src={fullUrl}
+                    alt={`Product ${index + 1}`}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+
+                  {/* Zoom overlay on hover */}
+                  <div className="absolute inset-0 bg-black/45 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <span className="text-white text-xs font-bold bg-[#2F6FED] px-3.5 py-1.5 rounded-full shadow-md">
+                      Click to Open
+                    </span>
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </section>
       )}
@@ -854,6 +899,59 @@ const MedicalAccessoriesDetails = () => {
           </button>
         </div>
       </section>
+
+      {/* =====================================
+          LIGHTBOX MODAL OVERLAY
+      ===================================== */}
+
+      {activeImage && (
+        <div
+          className="
+            fixed
+            inset-0
+            z-50
+            flex
+            items-center
+            justify-center
+            bg-black/90
+            p-4
+            backdrop-blur-md
+            transition-opacity
+            duration-300
+          "
+          onClick={() => setActiveImage(null)}
+        >
+          <button
+            className="
+              absolute
+              right-6
+              top-6
+              flex
+              h-12
+              w-12
+              items-center
+              justify-center
+              rounded-full
+              bg-white/10
+              text-white
+              hover:bg-white/20
+              transition-all
+              duration-300
+              focus:outline-none
+            "
+            onClick={() => setActiveImage(null)}
+          >
+            ✕
+          </button>
+
+          <img
+            src={activeImage}
+            alt="Zoomed Product Catalog"
+            className="max-h-[90vh] max-w-full object-contain rounded-xl shadow-2xl transition-transform duration-300 scale-100"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 };
