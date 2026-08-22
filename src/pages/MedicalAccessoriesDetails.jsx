@@ -604,8 +604,12 @@ const MedicalAccessoriesDetails = () => {
             {details.galleryImages.map((imageUri, index) => {
               const getFullImageUrl = (url) => {
                 if (!url) return "";
-                if (url.startsWith("http")) return url;
-                return `http://66.29.151.40:6060${url}`;
+                if (url.startsWith("http") || url.startsWith("data:") || url.startsWith("blob:")) return url;
+                if (url.startsWith("/src/") || url.startsWith("/assets/")) return url;
+                if (url.startsWith("/media/")) {
+                  return `http://66.29.151.40:6060${url}`;
+                }
+                return url;
               };
 
               const fullUrl = getFullImageUrl(imageUri);
