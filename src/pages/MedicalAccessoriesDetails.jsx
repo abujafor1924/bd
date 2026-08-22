@@ -24,7 +24,7 @@ const MedicalAccessoriesDetails = () => {
   // NOT FOUND
   // =====================================
 
-  if (!details) {
+  if (!details && !category) {
     return (
       <section className="w-full min-w-0 pb-12">
         <div className="flex min-h-[70vh] items-center justify-center px-4">
@@ -102,6 +102,20 @@ const MedicalAccessoriesDetails = () => {
       </section>
     );
   }
+
+  const categoryName =
+    category?.name_en ||
+    category?.name ||
+    category?.name_bn ||
+    details?.title ||
+    "Medical Category";
+
+  const categoryDetails =
+    category?.details_en ||
+    category?.details ||
+    category?.details_bn ||
+    details?.description ||
+    "";
 
   return (
     <section className="w-full min-w-0 pb-12">
@@ -272,7 +286,7 @@ const MedicalAccessoriesDetails = () => {
             {category?.image ? (
               <img
                 src={category.image}
-                alt={details.title}
+                alt={categoryName}
                 className="
                   relative
                   z-10
@@ -343,22 +357,24 @@ const MedicalAccessoriesDetails = () => {
                 lg:text-5xl
               "
             >
-              {details.title}
+              {categoryName}
             </h1>
 
-            <p
-              className="
-                mt-4
-                max-w-xl
-                text-base
-                font-bold
-                leading-7
-                text-[#2F6FED]
-                md:text-lg
-              "
-            >
-              {details.subtitle}
-            </p>
+            {details?.subtitle && (
+              <p
+                className="
+                  mt-4
+                  max-w-xl
+                  text-base
+                  font-bold
+                  leading-7
+                  text-[#2F6FED]
+                  md:text-lg
+                "
+              >
+                {details.subtitle}
+              </p>
+            )}
 
             <p
               className="
@@ -370,7 +386,7 @@ const MedicalAccessoriesDetails = () => {
                 md:text-base
               "
             >
-              {details.description}
+              {categoryDetails}
             </p>
 
             {/* BENEFITS */}
@@ -453,135 +469,9 @@ const MedicalAccessoriesDetails = () => {
           FEATURES
       ===================================== */}
 
-      <section className="mt-9">
-        <div className="mb-6">
-          <div
-            className="
-              inline-flex
-              items-center
-              gap-2
-              rounded-full
-              bg-[#D9F7E8]
-              px-3.5
-              py-2
-              text-xs
-              font-bold
-              text-[#2F6FED]
-            "
-          >
-            <CheckCircle2 size={15} />
-            Why Choose This Category
-          </div>
-
-          <h2
-            className="
-              mt-3
-              text-2xl
-              font-extrabold
-              tracking-tight
-              text-[#212121]
-              md:text-3xl
-            "
-          >
-            Designed for Better Care
-          </h2>
-
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-[#7A7A7A]">
-            Carefully selected medical accessories designed to support
-            better healthcare and everyday wellbeing.
-          </p>
-        </div>
-
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {details.features.map((feature, index) => (
-            <div
-              key={index}
-              className="
-                group
-                relative
-                overflow-hidden
-                rounded-[24px]
-                border
-                border-[#EEEEEE]
-                bg-white
-                p-5
-                shadow-[0_6px_24px_rgba(0,0,0,0.05)]
-                transition-all
-                duration-300
-                hover:-translate-y-1.5
-                hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)]
-              "
-            >
-              <div
-                className="
-                  pointer-events-none
-                  absolute
-                  -right-8
-                  -top-8
-                  h-24
-                  w-24
-                  rounded-full
-                  bg-[#D9F7E8]
-                  opacity-60
-                  transition-transform
-                  duration-500
-                  group-hover:scale-125
-                "
-              />
-
-              <div
-                className="
-                  relative
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-2xl
-                  bg-[#D9F7E8]
-                  text-[#2F6FED]
-                "
-              >
-                <CheckCircle2 size={23} />
-              </div>
-
-              <h3
-                className="
-                  relative
-                  mt-5
-                  text-sm
-                  font-extrabold
-                  leading-6
-                  text-[#212121]
-                "
-              >
-                {feature}
-              </h3>
-
-              <div
-                className="
-                  mt-4
-                  h-1
-                  w-8
-                  rounded-full
-                  bg-[#2F6FED]
-                  transition-all
-                  duration-300
-                  group-hover:w-14
-                "
-              />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* =====================================
-          PRODUCTS
-      ===================================== */}
-
-      <section className="mt-10">
-        <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-          <div>
+      {details?.features && details.features.length > 0 && (
+        <section className="mt-9">
+          <div className="mb-6">
             <div
               className="
                 inline-flex
@@ -596,8 +486,8 @@ const MedicalAccessoriesDetails = () => {
                 text-[#2F6FED]
               "
             >
-              <HeartPulse size={15} />
-              Explore Products
+              <CheckCircle2 size={15} />
+              Why Choose This Category
             </div>
 
             <h2
@@ -610,56 +500,55 @@ const MedicalAccessoriesDetails = () => {
                 md:text-3xl
               "
             >
-              Available Products
+              Designed for Better Care
             </h2>
+
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-[#7A7A7A]">
+              Carefully selected medical accessories designed to support
+              better healthcare and everyday wellbeing.
+            </p>
           </div>
 
-          <p className="max-w-md text-sm leading-6 text-[#7A7A7A]">
-            Explore our range of products available under this medical
-            accessory category.
-          </p>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {details.products.map((product, index) => (
-            <div
-              key={index}
-              className="
-                group
-                relative
-                overflow-hidden
-                rounded-[24px]
-                border
-                border-[#EEEEEE]
-                bg-white
-                p-6
-                shadow-[0_6px_24px_rgba(0,0,0,0.05)]
-                transition-all
-                duration-300
-                hover:-translate-y-1.5
-                hover:shadow-[0_14px_34px_rgba(0,0,0,0.09)]
-              "
-            >
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {details.features.map((feature, index) => (
               <div
+                key={index}
                 className="
-                  pointer-events-none
-                  absolute
-                  -right-10
-                  -top-10
-                  h-28
-                  w-28
-                  rounded-full
-                  bg-[#D9F7E8]
-                  opacity-50
-                  transition-transform
-                  duration-500
-                  group-hover:scale-125
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-[24px]
+                  border
+                  border-[#EEEEEE]
+                  bg-white
+                  p-5
+                  shadow-[0_6px_24px_rgba(0,0,0,0.05)]
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1.5
+                  hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)]
                 "
-              />
-
-              <div className="relative flex items-center justify-between">
+              >
                 <div
                   className="
+                    pointer-events-none
+                    absolute
+                    -right-8
+                    -top-8
+                    h-24
+                    w-24
+                    rounded-full
+                    bg-[#D9F7E8]
+                    opacity-60
+                    transition-transform
+                    duration-500
+                    group-hover:scale-125
+                  "
+                />
+
+                <div
+                  className="
+                    relative
                     flex
                     h-12
                     w-12
@@ -667,85 +556,216 @@ const MedicalAccessoriesDetails = () => {
                     justify-center
                     rounded-2xl
                     bg-[#D9F7E8]
-                    text-sm
-                    font-extrabold
                     text-[#2F6FED]
                   "
                 >
-                  {String(index + 1).padStart(2, "0")}
+                  <CheckCircle2 size={23} />
                 </div>
+
+                <h3
+                  className="
+                    relative
+                    mt-5
+                    text-sm
+                    font-extrabold
+                    leading-6
+                    text-[#212121]
+                  "
+                >
+                  {feature}
+                </h3>
 
                 <div
                   className="
-                    flex
-                    h-9
-                    w-9
-                    items-center
-                    justify-center
+                    mt-4
+                    h-1
+                    w-8
                     rounded-full
-                    bg-[#F2F2F2]
-                    text-[#7A7A7A]
+                    bg-[#2F6FED]
                     transition-all
                     duration-300
-                    group-hover:translate-x-1
-                    group-hover:bg-[#D9F7E8]
+                    group-hover:w-14
+                  "
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* =====================================
+          PRODUCTS
+      ===================================== */}
+
+      {details?.products && details.products.length > 0 && (
+        <section className="mt-10">
+          <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <div
+                className="
+                  inline-flex
+                  items-center
+                  gap-2
+                  rounded-full
+                  bg-[#D9F7E8]
+                  px-3.5
+                  py-2
+                  text-xs
+                  font-bold
+                  text-[#2F6FED]
+                "
+              >
+                <HeartPulse size={15} />
+                Explore Products
+              </div>
+
+              <h2
+                className="
+                  mt-3
+                  text-2xl
+                  font-extrabold
+                  tracking-tight
+                  text-[#212121]
+                  md:text-3xl
+                "
+              >
+                Available Products
+              </h2>
+            </div>
+
+            <p className="max-w-md text-sm leading-6 text-[#7A7A7A]">
+              Explore our range of products available under this medical
+              accessory category.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {details.products.map((product, index) => (
+              <div
+                key={index}
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-[24px]
+                  border
+                  border-[#EEEEEE]
+                  bg-white
+                  p-6
+                  shadow-[0_6px_24px_rgba(0,0,0,0.05)]
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1.5
+                  hover:shadow-[0_14px_34px_rgba(0,0,0,0.09)]
+                "
+              >
+                <div
+                  className="
+                    pointer-events-none
+                    absolute
+                    -right-10
+                    -top-10
+                    h-28
+                    w-28
+                    rounded-full
+                    bg-[#D9F7E8]
+                    opacity-50
+                    transition-transform
+                    duration-500
+                    group-hover:scale-125
+                  "
+                />
+
+                <div className="relative flex items-center justify-between">
+                  <div
+                    className="
+                      flex
+                      h-12
+                      w-12
+                      items-center
+                      justify-center
+                      rounded-2xl
+                      bg-[#D9F7E8]
+                      text-sm
+                      font-extrabold
+                      text-[#2F6FED]
+                    "
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+
+                  <div
+                    className="
+                      flex
+                      h-9
+                      w-9
+                      items-center
+                      justify-center
+                      rounded-full
+                      bg-[#F2F2F2]
+                      text-[#7A7A7A]
+                      transition-all
+                      duration-300
+                      group-hover:translate-x-1
+                      group-hover:bg-[#D9F7E8]
+                      group-hover:text-[#2F6FED]
+                    "
+                  >
+                    <ArrowRight size={17} />
+                  </div>
+                </div>
+
+                <h3
+                  className="
+                    relative
+                    mt-5
+                    text-lg
+                    font-extrabold
+                    text-[#212121]
+                    transition-colors
+                    duration-300
                     group-hover:text-[#2F6FED]
                   "
                 >
-                  <ArrowRight size={17} />
-                </div>
-              </div>
+                  {product.name}
+                </h3>
 
-              <h3
-                className="
-                  relative
-                  mt-5
-                  text-lg
-                  font-extrabold
-                  text-[#212121]
-                  transition-colors
-                  duration-300
-                  group-hover:text-[#2F6FED]
-                "
-              >
-                {product.name}
-              </h3>
-
-              <p
-                className="
-                  relative
-                  mt-2
-                  text-sm
-                  leading-6
-                  text-[#7A7A7A]
-                "
-              >
-                {product.description}
-              </p>
-
-              <div className="relative mt-5 border-t border-[#EEEEEE] pt-4">
-                <div
+                <p
                   className="
-                    inline-flex
-                    items-center
-                    gap-2
-                    rounded-full
-                    bg-[#F2F2F2]
-                    px-3
-                    py-2
-                    text-xs
-                    font-bold
-                    text-[#2F6FED]
+                    relative
+                    mt-2
+                    text-sm
+                    leading-6
+                    text-[#7A7A7A]
                   "
                 >
-                  <CheckCircle2 size={14} />
-                  Available in this category
+                  {product.description}
+                </p>
+
+                <div className="relative mt-5 border-t border-[#EEEEEE] pt-4">
+                  <div
+                    className="
+                      inline-flex
+                      items-center
+                      gap-2
+                      rounded-full
+                      bg-[#F2F2F2]
+                      px-3
+                      py-2
+                      text-xs
+                      font-bold
+                      text-[#2F6FED]
+                    "
+                  >
+                    <CheckCircle2 size={14} />
+                    Available in this category
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* =====================================
           BOTTOM CTA
