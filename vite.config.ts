@@ -7,4 +7,16 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  server: {
+    proxy: {
+      "/api/v1": {
+        target: "http://66.29.151.40:6060",
+        changeOrigin: true,
+      },
+      "/media": {
+        target: "http://66.29.151.40:6060",
+        changeOrigin: true,
+      },
+    },
+  },
 });

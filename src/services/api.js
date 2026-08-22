@@ -17,6 +17,33 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
+const replaceHost = (data) => {
+  if (typeof data === "string") {
+    return data.replace(/https?:\/\/66\.29\.151\.40:6060/g, "");
+  }
+  if (Array.isArray(data)) {
+    return data.map(replaceHost);
+  }
+  if (data !== null && typeof data === "object") {
+    for (const key in data) {
+      if (Object.prototype.hasOwnProperty.call(data, key)) {
+        data[key] = replaceHost(data[key]);
+      }
+    }
+  }
+  return data;
+};
+
+api.interceptors.response.use(
+  (response) => {
+    if (response && response.data) {
+      response.data = replaceHost(response.data);
+    }
+    return response;
+  },
+  (error) => Promise.reject(error)
+);
+
 export default api;
 
 
