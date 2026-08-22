@@ -1,3 +1,14 @@
+import img1 from "../assets/images/card/067ff633-35d7-400d-9f53-2c01e11aedf2.jpeg";
+import img2 from "../assets/images/card/07315ecd-e0ac-40a5-82dd-af50e26c8cb7.jpeg";
+import img3 from "../assets/images/card/0f712d4f-0a36-4fb9-be45-e6ed20c2e5d7.jpeg";
+import img4 from "../assets/images/card/10789356-94f7-406e-9a6b-8267529f11d7.jpeg";
+import img5 from "../assets/images/card/241c4afa-a6bd-4297-9f27-76bcc711c637.jpeg";
+import img6 from "../assets/images/card/3cd54615-18f0-425f-8684-29ba62428cf8.jpeg";
+import img7 from "../assets/images/card/4cfc0e6b-77eb-4538-adf5-af71853d43a6.jpeg";
+import img8 from "../assets/images/card/9f830772-96dc-4e23-9568-65a01d21ebf8.jpeg";
+import img9 from "../assets/images/card/d2bb6737-5e17-4281-acff-619d1ca74039.jpeg";
+import img10 from "../assets/images/card/d43ceda0-e413-4b7e-97c5-fb87d931285b.jpeg";
+
 const medicalAccessoriesDetails = {
   // Legacy / Mapped Keys (by ID or name matching)
   1: {
@@ -11,15 +22,6 @@ const medicalAccessoriesDetails = {
       "Non-slip bottom design",
       "Removable and washable cover",
     ],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&auto=format&fit=crop&q=80"
-    ]
   },
 
   2: {
@@ -33,15 +35,6 @@ const medicalAccessoriesDetails = {
       "Supports healthy prayer posture",
       "Embossed anti-slip surface",
     ],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1609599006353-e629f1d40e4f?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&auto=format&fit=crop&q=80"
-    ]
   },
 
   3: {
@@ -55,15 +48,6 @@ const medicalAccessoriesDetails = {
       "Improves blood circulation",
       "Contoured ergonomic shape",
     ],
-    galleryImages: [
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
-      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
-      "/media/accessory_categories/i.webp",
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
-    ]
   },
 
   4: {
@@ -77,15 +61,6 @@ const medicalAccessoriesDetails = {
       "Prevents morning stiffness",
       "Premium breathable fabric cover",
     ],
-    galleryImages: [
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
-      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
-      "/media/accessory_categories/i.webp",
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
-    ]
   },
 
   5: {
@@ -99,15 +74,6 @@ const medicalAccessoriesDetails = {
       "Supports upper body elevation",
       "Hypoallergenic cover",
     ],
-    galleryImages: [
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
-      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
-      "/media/accessory_categories/i.webp",
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
-    ]
   },
 
   6: {
@@ -121,15 +87,6 @@ const medicalAccessoriesDetails = {
       "Essential first aid items",
       "Easy to store and carry",
     ],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1512428813824-f48d95165311?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1550572017-edd951b55104?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80"
-    ]
   },
 
   7: {
@@ -143,15 +100,6 @@ const medicalAccessoriesDetails = {
       "Available for personal use",
       "Convenient and easy to use",
     ],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584483777135-217362a6b2de?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1605656811221-2281bab7495b?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1583947581924-860bda6a26df?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584744900262-355f1f7699d8?w=800&auto=format&fit=crop&q=80"
-    ]
   },
 
   9: {
@@ -165,15 +113,6 @@ const medicalAccessoriesDetails = {
       "Designed for comfort",
       "Helps improve mobility and independence",
     ],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1607990283143-e81e7a2c93ab?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=800&auto=format&fit=crop&q=80"
-    ]
   },
 
   10: {
@@ -187,15 +126,6 @@ const medicalAccessoriesDetails = {
       "Easy to operate products",
       "Supports regular respiratory management",
     ],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584515981387-a257c79cb794?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1619088410291-29093dfb4967?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=800&auto=format&fit=crop&q=80"
-    ]
   },
 
   11: {
@@ -209,15 +139,7 @@ const medicalAccessoriesDetails = {
       "Lightweight and convenient",
       "Useful for resting and recovery",
     ],
-    galleryImages: [
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
-      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
-      "/media/accessory_categories/i.webp",
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
-    ]
+    galleryImages: [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
   },
 
   // Fallback name keys to ensure name-based match works flawlessly
@@ -232,15 +154,6 @@ const medicalAccessoriesDetails = {
       "Non-slip bottom design",
       "Removable and washable cover",
     ],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&auto=format&fit=crop&q=80"
-    ]
   },
   "special prayer mat pad": {
     title: "Special Prayer Mat Pad",
@@ -253,15 +166,6 @@ const medicalAccessoriesDetails = {
       "Supports healthy prayer posture",
       "Embossed anti-slip surface",
     ],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1609599006353-e629f1d40e4f?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&auto=format&fit=crop&q=80"
-    ]
   },
   "knee support roll and wedge": {
     title: "Knee Support Roll And Wedge",
@@ -274,15 +178,6 @@ const medicalAccessoriesDetails = {
       "Improves blood circulation",
       "Contoured ergonomic shape",
     ],
-    galleryImages: [
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
-      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
-      "/media/accessory_categories/i.webp",
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
-    ]
   },
   "support sleeping wedge": {
     title: "Support Sleeping Wedge",
@@ -295,15 +190,6 @@ const medicalAccessoriesDetails = {
       "Prevents morning stiffness",
       "Premium breathable fabric cover",
     ],
-    galleryImages: [
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
-      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
-      "/media/accessory_categories/i.webp",
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
-    ]
   },
   "elevated bed wedge": {
     title: "Elevated Bed Wedge",
@@ -316,15 +202,6 @@ const medicalAccessoriesDetails = {
       "Supports upper body elevation",
       "Hypoallergenic cover",
     ],
-    galleryImages: [
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
-      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
-      "/media/accessory_categories/i.webp",
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
-    ]
   },
   "first aid supplies": {
     title: "First Aid Supplies",
@@ -337,15 +214,6 @@ const medicalAccessoriesDetails = {
       "Essential first aid items",
       "Easy to store and carry",
     ],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1512428813824-f48d95165311?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1550572017-edd951b55104?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80"
-    ]
   },
   "face masks and gloves": {
     title: "Face Masks and Gloves",
@@ -358,15 +226,6 @@ const medicalAccessoriesDetails = {
       "Available for personal use",
       "Convenient and easy to use",
     ],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584483777135-217362a6b2de?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1605656811221-2281bab7495b?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1583947581924-860bda6a26df?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584744900262-355f1f7699d8?w=800&auto=format&fit=crop&q=80"
-    ]
   },
   "mobility aids": {
     title: "Mobility Aids",
@@ -379,15 +238,6 @@ const medicalAccessoriesDetails = {
       "Designed for comfort",
       "Helps improve mobility and independence",
     ],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1607990283143-e81e7a2c93ab?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=800&auto=format&fit=crop&q=80"
-    ]
   },
   "respiratory units": {
     title: "Respiratory Units",
@@ -400,15 +250,6 @@ const medicalAccessoriesDetails = {
       "Easy to operate products",
       "Supports regular respiratory management",
     ],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1584515981387-a257c79cb794?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1619088410291-29093dfb4967?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=800&auto=format&fit=crop&q=80"
-    ]
   },
   "bed wedges": {
     title: "Bed Wedges",
@@ -421,15 +262,7 @@ const medicalAccessoriesDetails = {
       "Lightweight and convenient",
       "Useful for resting and recovery",
     ],
-    galleryImages: [
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-24-12.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-26-54.png",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_14-28-24.png",
-      "/media/accessory_categories/wound_care_EG0s6mj.PNG",
-      "/media/accessory_categories/Screenshot_from_2026-08-22_15-00-44.png",
-      "/media/accessory_categories/i.webp",
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80"
-    ]
+    galleryImages: [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
   },
 };
 
