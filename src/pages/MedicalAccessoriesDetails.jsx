@@ -561,6 +561,171 @@ const MedicalAccessoriesDetails = () => {
       </section>
 
       {/* =====================================
+          PRODUCTS
+      ===================================== */}
+
+      {details?.products && details.products.length > 0 && (
+        <section className="mt-10">
+          <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <div
+                className="
+                  inline-flex
+                  items-center
+                  gap-2
+                  rounded-full
+                  bg-[#D9F7E8]
+                  px-3.5
+                  py-2
+                  text-xs
+                  font-bold
+                  text-[#2F6FED]
+                "
+              >
+                <HeartPulse size={15} />
+                Explore Products
+              </div>
+
+              <h2
+                className="
+                  mt-3
+                  text-2xl
+                  font-extrabold
+                  tracking-tight
+                  text-[#212121]
+                  md:text-3xl
+                "
+              >
+                Available Products
+              </h2>
+            </div>
+
+            <p className="max-w-md text-sm leading-6 text-[#7A7A7A]">
+              Explore our range of products available under this medical
+              accessory category.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {details.products.map((product, index) => {
+              // Get category-specific product images dynamically
+              const getProductImage = (catName) => {
+                const name = catName.toLowerCase().trim();
+                if (name.includes("wedge")) {
+                  return "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&auto=format&fit=crop&q=80";
+                } else if (name.includes("respiratory") || name.includes("nebulizer")) {
+                  return "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=500&auto=format&fit=crop&q=80";
+                } else if (name.includes("mobility") || name.includes("wheelchair")) {
+                  return "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?w=500&auto=format&fit=crop&q=80";
+                } else if (name.includes("mask") || name.includes("glove")) {
+                  return "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=500&auto=format&fit=crop&q=80";
+                } else if (name.includes("first aid")) {
+                  return "https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=500&auto=format&fit=crop&q=80";
+                } else if (name.includes("cushion")) {
+                  return "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&auto=format&fit=crop&q=80";
+                } else if (name.includes("prayer")) {
+                  return "https://images.unsplash.com/photo-1609599006353-e629f1d40e4f?w=500&auto=format&fit=crop&q=80";
+                }
+                return "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&auto=format&fit=crop&q=80";
+              };
+
+              const productImg = product.image || getProductImage(categoryName);
+
+              return (
+                <div
+                  key={index}
+                  className="
+                    group
+                    relative
+                    overflow-hidden
+                    rounded-[24px]
+                    border
+                    border-[#EEEEEE]
+                    bg-white
+                    p-0
+                    shadow-[0_6px_24px_rgba(0,0,0,0.05)]
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1.5
+                    hover:shadow-[0_14px_34px_rgba(0,0,0,0.09)]
+                  "
+                >
+                  {/* Product Image */}
+                  <div className="relative aspect-video w-full overflow-hidden bg-gray-50 border-b border-[#EEEEEE]">
+                    <img
+                      src={productImg}
+                      alt={product.name}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div
+                      className="
+                        absolute
+                        left-4
+                        top-4
+                        flex
+                        h-8
+                        w-8
+                        items-center
+                        justify-center
+                        rounded-lg
+                        bg-white/95
+                        text-xs
+                        font-extrabold
+                        text-[#2F6FED]
+                        shadow-sm
+                        backdrop-blur-sm
+                      "
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+                  </div>
+
+                  <div className="p-6">
+                    <h3
+                      className="
+                        text-lg
+                        font-extrabold
+                        text-[#212121]
+                        transition-colors
+                        duration-300
+                        group-hover:text-[#2F6FED]
+                      "
+                    >
+                      {product.name}
+                    </h3>
+
+                    <p className="mt-2 text-sm leading-6 text-[#7A7A7A]">
+                      {product.description}
+                    </p>
+
+                    <div className="mt-5 border-t border-[#EEEEEE] pt-4">
+                      <div
+                        className="
+                          inline-flex
+                          items-center
+                          gap-2
+                          rounded-full
+                          bg-[#F2F2F2]
+                          px-3
+                          py-2
+                          text-xs
+                          font-bold
+                          text-[#2F6FED]
+                        "
+                      >
+                        <CheckCircle2 size={14} />
+                        Available in this category
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      {/* =====================================
           FEATURES
       ===================================== */}
 
@@ -682,180 +847,6 @@ const MedicalAccessoriesDetails = () => {
                     group-hover:w-14
                   "
                 />
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* =====================================
-          PRODUCTS
-      ===================================== */}
-
-      {details?.products && details.products.length > 0 && (
-        <section className="mt-10">
-          <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <div
-                className="
-                  inline-flex
-                  items-center
-                  gap-2
-                  rounded-full
-                  bg-[#D9F7E8]
-                  px-3.5
-                  py-2
-                  text-xs
-                  font-bold
-                  text-[#2F6FED]
-                "
-              >
-                <HeartPulse size={15} />
-                Explore Products
-              </div>
-
-              <h2
-                className="
-                  mt-3
-                  text-2xl
-                  font-extrabold
-                  tracking-tight
-                  text-[#212121]
-                  md:text-3xl
-                "
-              >
-                Available Products
-              </h2>
-            </div>
-
-            <p className="max-w-md text-sm leading-6 text-[#7A7A7A]">
-              Explore our range of products available under this medical
-              accessory category.
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {details.products.map((product, index) => (
-              <div
-                key={index}
-                className="
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-[24px]
-                  border
-                  border-[#EEEEEE]
-                  bg-white
-                  p-6
-                  shadow-[0_6px_24px_rgba(0,0,0,0.05)]
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1.5
-                  hover:shadow-[0_14px_34px_rgba(0,0,0,0.09)]
-                "
-              >
-                <div
-                  className="
-                    pointer-events-none
-                    absolute
-                    -right-10
-                    -top-10
-                    h-28
-                    w-28
-                    rounded-full
-                    bg-[#D9F7E8]
-                    opacity-50
-                    transition-transform
-                    duration-500
-                    group-hover:scale-125
-                  "
-                />
-
-                <div className="relative flex items-center justify-between">
-                  <div
-                    className="
-                      flex
-                      h-12
-                      w-12
-                      items-center
-                      justify-center
-                      rounded-2xl
-                      bg-[#D9F7E8]
-                      text-sm
-                      font-extrabold
-                      text-[#2F6FED]
-                    "
-                  >
-                    {String(index + 1).padStart(2, "0")}
-                  </div>
-
-                  <div
-                    className="
-                      flex
-                      h-9
-                      w-9
-                      items-center
-                      justify-center
-                      rounded-full
-                      bg-[#F2F2F2]
-                      text-[#7A7A7A]
-                      transition-all
-                      duration-300
-                      group-hover:translate-x-1
-                      group-hover:bg-[#D9F7E8]
-                      group-hover:text-[#2F6FED]
-                    "
-                  >
-                    <ArrowRight size={17} />
-                  </div>
-                </div>
-
-                <h3
-                  className="
-                    relative
-                    mt-5
-                    text-lg
-                    font-extrabold
-                    text-[#212121]
-                    transition-colors
-                    duration-300
-                    group-hover:text-[#2F6FED]
-                  "
-                >
-                  {product.name}
-                </h3>
-
-                <p
-                  className="
-                    relative
-                    mt-2
-                    text-sm
-                    leading-6
-                    text-[#7A7A7A]
-                  "
-                >
-                  {product.description}
-                </p>
-
-                <div className="relative mt-5 border-t border-[#EEEEEE] pt-4">
-                  <div
-                    className="
-                      inline-flex
-                      items-center
-                      gap-2
-                      rounded-full
-                      bg-[#F2F2F2]
-                      px-3
-                      py-2
-                      text-xs
-                      font-bold
-                      text-[#2F6FED]
-                    "
-                  >
-                    <CheckCircle2 size={14} />
-                    Available in this category
-                  </div>
-                </div>
               </div>
             ))}
           </div>
