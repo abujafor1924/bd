@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import {
   ArrowLeft,
@@ -11,20 +12,115 @@ import {
 } from "lucide-react";
 
 import medicalAccessoriesDetails from "../data/medicalAccessories";
+import medicalAccessoriesService from "../services/medicalAccessoriesService";
 
 const MedicalAccessoriesDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
 
-  const category = location.state?.category;
-  const details = medicalAccessoriesDetails[id];
+  const [category, setCategory] = useState(location.state?.category || null);
+  const [loading, setLoading] = useState(!location.state?.category);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (!category) {
+      const fetchCategory = async () => {
+        try {
+          setLoading(true);
+          const data = await medicalAccessoriesService.getMedicalAccessoryCategories();
+          const list = Array.isArray(data) ? data : (Array.isArray(data?.results) ? data.results : []);
+          const found = list.find((item) => String(item.id) === String(id));
+          if (found) {
+            setCategory(found);
+          } else {
+            setError("Category not found");
+          }
+        } catch (err) {
+          console.error("Error fetching category:", err);
+          setError("Failed to load category details");
+        } finally {
+          setLoading(false);
+        }
+      };
+      fetchCategory();
+    }
+  }, [id, category]);
+
+  // Try to find matching static details or fallback to dynamic generation
+  const getDetails = (cat) => {
+    if (!cat) return null;
+    const catName = (cat.name_en || cat.name || "").toLowerCase().trim();
+    
+    if (catName && medicalAccessoriesDetails[catName]) {
+      return medicalAccessoriesDetails[catName];
+    }
+    
+    // Check if any title match in the keys
+    const matchedKey = Object.keys(medicalAccessoriesDetails).find(
+      (key) =>
+        medicalAccessoriesDetails[key].title?.toLowerCase().trim() === catName
+    );
+    if (matchedKey) {
+      return medicalAccessoriesDetails[matchedKey];
+    }
+    
+    // Fallback to ID-based match
+    if (medicalAccessoriesDetails[id]) {
+      return medicalAccessoriesDetails[id];
+    }
+    
+    // Generate high-quality fallback details dynamically so all categories look the same
+    const name = cat.name_en || cat.name || cat.name_bn || "Medical Accessory";
+    const desc = cat.details_en || cat.details || cat.details_bn || `${name} are premium-quality medical accessories designed to support health and wellness.`;
+    return {
+      title: name,
+      subtitle: "Premium healthcare accessories",
+      description: desc,
+      features: [
+        "Clinically tested quality",
+        "Recommended by health experts",
+        "Durable and premium design",
+        "Supports recovery and everyday care",
+      ],
+      products: [
+        {
+          name: `Standard ${name}`,
+          description: `High-quality standard ${name.toLowerCase()} designed for everyday support.`,
+        },
+        {
+          name: `Premium ${name}`,
+          description: `Enhanced ergonomic version of ${name.toLowerCase()} for maximum comfort.`,
+        },
+        {
+          name: `Portable ${name}`,
+          description: `Travel-friendly, lightweight version of ${name.toLowerCase()} for on-the-go care.`,
+        },
+      ],
+    };
+  };
+
+  const details = getDetails(category);
 
   // =====================================
-  // NOT FOUND
+  // LOADING STATE
   // =====================================
 
-  if (!details && !category) {
+  if (loading) {
+    return (
+      <section className="w-full min-w-0 pb-12">
+        <div className="flex min-h-[50vh] items-center justify-center">
+          <div className="h-10 w-10 animate-spin rounded-full border-4 border-[#2F6FED] border-t-transparent"></div>
+        </div>
+      </section>
+    );
+  }
+
+  // =====================================
+  // NOT FOUND / ERROR STATE
+  // =====================================
+
+  if ((!category && !details) || error) {
     return (
       <section className="w-full min-w-0 pb-12">
         <div className="flex min-h-[70vh] items-center justify-center px-4">
@@ -68,8 +164,7 @@ const MedicalAccessoriesDetails = () => {
               </h2>
 
               <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-[#7A7A7A]">
-                Sorry, we couldn't find the medical accessory category
-                you're looking for.
+                {error || "Sorry, we couldn't find the medical accessory category you're looking for."}
               </p>
 
               <button
